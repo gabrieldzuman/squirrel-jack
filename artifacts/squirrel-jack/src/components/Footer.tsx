@@ -30,14 +30,6 @@ export function Footer() {
               <a href="#about" className="text-foreground/80 hover:text-primary transition-colors">About Us</a>
               <a href="#contact" className="text-foreground/80 hover:text-primary transition-colors">Contact</a>
             </nav>
-            <div className="flex flex-col gap-2">
-              <a href="tel:8595287664" className="flex items-center justify-center gap-2 text-foreground font-bold hover:text-primary transition-colors">
-                <Phone className="w-4 h-4" /> Call: 859-528-7664
-              </a>
-              <a href="sms:8596295695" className="flex items-center justify-center gap-2 text-foreground font-bold hover:text-primary transition-colors">
-                <MessageSquare className="w-4 h-4" /> Text: 859-629-5695
-              </a>
-            </div>
           </div>
 
           {/* Right */}

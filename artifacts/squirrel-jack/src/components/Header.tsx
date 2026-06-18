@@ -55,14 +55,6 @@ export function Header() {
                 {link.name}
               </a>
             ))}
-            <a 
-              href="tel:8595287664" 
-              className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-5 py-2.5 rounded-full transition-all hover:scale-105 active:scale-95 shadow-md"
-              data-testid="button-nav-call"
-            >
-              <Phone className="w-4 h-4" />
-              <span>859-528-7664</span>
-            </a>
           </nav>
 
           {/* Mobile Menu Toggle */}
@@ -95,13 +87,6 @@ export function Header() {
             </a>
           ))}
           <div className="pt-6 border-t border-white/10 flex flex-col gap-4">
-            <a 
-              href="tel:8595287664" 
-              className="flex items-center justify-center gap-2 bg-primary text-primary-foreground font-bold px-5 py-4 rounded-xl text-lg"
-            >
-              <Phone className="w-5 h-5" />
-              <span>Call: 859-528-7664</span>
-            </a>
             <div className="flex flex-wrap gap-2 justify-center mt-4">
                <span className="text-xs bg-white/5 px-3 py-1.5 rounded-full">Fast & Reliable</span>
                <span className="text-xs bg-white/5 px-3 py-1.5 rounded-full">Eco-Friendly</span>
