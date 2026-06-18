@@ -55,7 +55,7 @@ export function Footer() {
 
         <div className="pt-8 border-t border-white/10 text-center flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-foreground/50">
           <p>© {new Date().getFullYear()} Squirrel Jack Junk Removal. All rights reserved.</p>
-          <p>Built with ❤️ in Lexington</p>
+          <p>Built with 🧡 in Lexington</p>
         </div>
       </div>
     </footer>

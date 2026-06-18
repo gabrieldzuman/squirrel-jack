@@ -12,10 +12,7 @@ export function Hero() {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="flex justify-center">
           <div className="text-center flex flex-col items-center max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 mb-6 backdrop-blur-sm">
-              <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
-              <span className="text-xs font-bold uppercase tracking-wider text-foreground">Lexington's #1 Junk Removal</span>
-            </div>
+            <br></br><br></br><br></br>
             
             <h1 className="font-heading font-extrabold text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.1] mb-6 text-foreground drop-shadow-lg">
               GET YOUR <br />
@@ -49,16 +46,16 @@ export function Hero() {
                 Call Now: 859-528-7664
               </a>
             </div>
-            
+            <br></br><br></br><br></br>
             <div className="mt-10 flex items-center gap-4 text-sm font-semibold text-foreground/70">
               <div className="flex -space-x-2">
                 {[1,2,3,4,5].map((i) => (
-                  <div key={i} className="w-8 h-8 rounded-full bg-primary/20 border-2 border-background flex items-center justify-center text-xs">
-                    ⭐
+                  <div key={i} className="">
+                    
                   </div>
                 ))}
               </div>
-              <p>Over 500+ happy neighbors</p>
+              {/* <p>Over 500+ happy neighbors</p> */}
             </div>
           </div>
         </div>
