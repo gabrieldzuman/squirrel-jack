@@ -7,7 +7,7 @@ const services = [
   { icon: "📦", title: "Household Items", desc: "Clothing, toys, boxes, mattresses, decor and miscellaneous items." },
   { icon: "🌿", title: "Yard Waste", desc: "Branches, leaves, bushes, grass clippings and more." },
   { icon: "🧱", title: "Construction Debris", desc: "Drywall, wood, concrete, brick, tile and other construction materials." },
-  { icon: "🔩", title: "Fences & Panels", desc: "Wood, vinyl, metal fencing and gates." },
+  { icon: "🔩", title: "Fences & Panels", desc: "Vinyl, metal fencing and gates." },
   { icon: "🏢", title: "Office & Commercial", desc: "Office cleanouts, retail spaces, storage units, warehouse cleanouts and more." },
   { icon: "🛁", title: "Hot Tubs", desc: "Hot tub removal and disposal." },
   { icon: "🔧", title: "Tools & Equipment", desc: "Power tools, hand tools, machinery and general equipment." },
