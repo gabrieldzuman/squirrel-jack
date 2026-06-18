@@ -10,8 +10,8 @@ export function Hero() {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="text-center lg:text-left order-2 lg:order-1 flex flex-col items-center lg:items-start">
+        <div className="flex justify-center">
+          <div className="text-center flex flex-col items-center max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 mb-6 backdrop-blur-sm">
               <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
               <span className="text-xs font-bold uppercase tracking-wider text-foreground">Lexington's #1 Junk Removal</span>
@@ -59,18 +59,6 @@ export function Hero() {
                 ))}
               </div>
               <p>Over 500+ happy neighbors</p>
-            </div>
-          </div>
-          
-          <div className="order-1 lg:order-2 flex justify-center lg:justify-end relative">
-            <div className="relative w-full max-w-[500px] lg:max-w-none aspect-square lg:aspect-auto lg:h-[600px] flex items-center justify-center">
-              <div className="absolute inset-0 bg-primary/20 rounded-full blur-[100px] animate-pulse"></div>
-              <img 
-                src="/squirrel-jack-logo.png" 
-                alt="Squirrel Jack driving junk truck" 
-                className="relative z-10 w-full h-full object-contain drop-shadow-2xl animate-in zoom-in duration-700"
-                style={{ filter: 'drop-shadow(0 20px 30px rgba(0,0,0,0.5))' }}
-              />
             </div>
           </div>
         </div>
