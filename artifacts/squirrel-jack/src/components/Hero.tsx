@@ -55,7 +55,6 @@ export function Hero() {
                   </div>
                 ))}
               </div>
-              {/* <p>Over 500+ happy neighbors</p> */}
             </div>
           </div>
         </div>
