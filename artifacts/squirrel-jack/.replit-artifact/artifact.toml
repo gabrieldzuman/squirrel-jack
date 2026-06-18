@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Squirrel Jack Junk Removal"
+version = "1.0.0"
+id = "artifacts/squirrel-jack"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18530
+
+[services.development]
+run = "pnpm --filter @workspace/squirrel-jack run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/squirrel-jack", "run", "build" ]
+publicDir = "artifacts/squirrel-jack/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18530"
+BASE_PATH = "/"

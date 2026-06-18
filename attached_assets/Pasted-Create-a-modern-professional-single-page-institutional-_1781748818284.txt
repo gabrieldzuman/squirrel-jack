@@ -1,0 +1,55 @@
+Create a modern, professional, single-page institutional website for Squirrel Jack Junk Removal using HTML, CSS, and vanilla JavaScript. The company is based in Lexington, KY.
+Design Requirements:
+* Color palette:
+    * Background/Main: #01200e (dark green)
+    * Accent: #e47200 (orange)
+    * Light: #f6e5d7 (warm white/cream)
+* Use clean, bold typography. Font suggestions: Impact or Montserrat for headings, Roboto for body.
+* Fully responsive (mobile-first).
+* Follow the branding and style of the attached flyer image (orange header, cartoon squirrel mascot, icon style, layout structure).
+Content (use exactly as written, do not change any text):
+Header / Navigation:
+* Logo: "SQUIRREL JACK" with "JUNK REMOVAL" tagline
+* Navigation: Home, Services, About Us, Contact
+Hero Section:
+* Big image background with the squirrel truck from the flyer (or similar illustration)
+* Text: "GET YOUR SPACE BACK!"
+* Buttons: "Get a Free Quote" and "Call Now"
+Services Section - "WE REMOVE:"
+Reproduce the exact grid from the flyer with all categories and descriptions:
+* Furniture (Sofas, chairs, tables, beds and more.)
+* Appliances (Fridges, washers, dryers, stoves, microwaves and more.)
+* Electronics (TVs, computers, monitors and other electronics.)
+* Household Items (Clothing, toys, boxes, mattresses, decor and miscellaneous items.)
+* Yard Waste (Branches, leaves, bushes, grass clippings and more.)
+* Construction Debris (Drywall, wood, concrete, brick, tile and other construction materials.)
+* Fences & Panels (Wood, vinyl, metal fencing and gates.)
+* Office & Commercial (Office cleanouts, retail spaces, storage units, warehouse cleanouts and more.)
+* Hot Tubs (Hot tub removal and disposal.)
+* Tools & Equipment (Power tools, hand tools, machinery and general equipment.)
+* General Junk (We handle almost anything you don't need anymore!)
+* Property Cleanouts (Estate cleanouts, moving cleanouts, foreclosure cleanouts and more.)
+Use icons similar to the flyer (sofa, fridge, TV, box, lawnmower, etc.).
+Trust Badges (top right style):
+* Fast & Reliable
+* Eco-Friendly Disposal
+* Honest & Dependable
+About Section:
+* Include the squirrel mascot illustration.
+* Text: "Your Junk. Our Mission. A Cleaner Tomorrow."
+* Founders: Marcos Stein (Co-founder) and Landon Levenson (Co-founder)
+Contact / CTA Section:
+* Phone: Call 859-528-7664 or Text 859-629-5695
+* Serving: Lexington & Surrounding Areas (Lexington, Nicholasville, Georgetown, Winchester, Richmond, Versailles and surrounding communities)
+* Residential & Commercial Services
+Footer:
+* Links, contact info, and "Responsible Disposal" message from the flyer.
+Technical Requirements:
+* Smooth scroll navigation
+* Mobile hamburger menu
+* Sticky header
+* Call-to-action buttons that stand out in orange
+* WhatsApp-style click-to-text button (use the text number)
+* SEO-friendly (proper headings, meta title: "Squirrel Jack Junk Removal | Lexington KY")
+* Fast loading and clean code
+Make it look professional, trustworthy, and fun — exactly matching the energetic branding of the logo.
