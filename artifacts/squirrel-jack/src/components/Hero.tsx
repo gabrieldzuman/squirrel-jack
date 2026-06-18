@@ -25,7 +25,8 @@ export function Hero() {
             </h1>
             
             <p className="text-lg md:text-xl text-foreground/80 mb-8 max-w-xl font-sans">
-              Lexington, KY's trusted junk removal team — residential & commercial. Fast, friendly, and fully insured. We do the heavy lifting.
+              KY's trusted junk removal team, residential & commercial. Fast, friendly, and fully insured. 
+              We do the heavy lifting!
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">

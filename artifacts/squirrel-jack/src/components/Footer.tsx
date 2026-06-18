@@ -54,8 +54,8 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/10 text-center flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-foreground/50">
-          <p>© {new Date().getFullYear()} Squirrel Jack Junk Removal. All rights reserved.</p>
-          <p>Built with 🧡 in Lexington</p>
+          <p>© {new Date().getFullYear()} Squirrel Jack. All rights reserved.</p>
+          <p>Developed by Gabriel Dzuman</p>
         </div>
       </div>
     </footer>
