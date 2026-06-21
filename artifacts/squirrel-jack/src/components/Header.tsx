@@ -69,12 +69,12 @@ export function Header() {
       </div>
 
       {/* Mobile Nav Drawer */}
-      <div 
-        className={`lg:hidden fixed inset-0 top-[72px] bg-background border-t border-white/10 transition-transform duration-300 ease-in-out ${
+      <div
+        className={`lg:hidden fixed inset-0 z-40 bg-background border-t border-white/10 transition-transform duration-300 ease-in-out ${
           mobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex flex-col p-6 gap-6">
+        <div className="flex flex-col p-6 gap-6 pt-[72px] sm:pt-[72px]">
           {navLinks.map((link) => (
             <a
               key={link.name}
