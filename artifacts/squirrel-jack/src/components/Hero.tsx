@@ -25,7 +25,7 @@ export function Hero() {
             </h1>
             
             <p className="text-lg md:text-xl text-foreground/80 mb-8 max-w-xl font-sans">
-              KY's trusted junk removal team, residential & commercial.  
+              KY's trusted junk removal team, residential & commercial.  <br></br>
               We do the heavy lifting!
             </p>
             <br></br>
