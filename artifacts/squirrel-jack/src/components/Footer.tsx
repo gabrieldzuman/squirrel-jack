@@ -38,7 +38,7 @@ export function Footer() {
             <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
               <h5 className="font-bold text-primary mb-2">Responsible Disposal</h5>
               <p className="text-foreground/80 text-sm leading-relaxed">
-                We recycle and donate what we can to reduce landfill waste. Doing our part to keep Kentucky beautiful.
+                We sort, donate, and recycle whenever possible, because what no longer serves you can still make a difference in someone else's life.
               </p>
             </div>
           </div>
