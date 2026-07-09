@@ -60,8 +60,8 @@ export function About() {
                 <div className="bg-[#01200e] text-[#f6e5d7] p-3 rounded-full mb-2">
                   <ShieldCheck className="w-6 h-6" />
                 </div>
-                <h4 className="font-bold text-[#01200e]">Licensed & Insured</h4>
-                <p className="text-sm text-[#01200e]/70">Fully protected for your peace of mind.</p>
+                <h4 className="font-bold text-[#01200e]">Satisfaction Guaranteed</h4>
+                <p className="text-sm text-[#01200e]/70">We work to better meet your needs.</p>
               </div>
               <div className="flex flex-col items-center lg:items-start gap-2">
                 <div className="bg-[#01200e] text-[#f6e5d7] p-3 rounded-full mb-2">
