@@ -13,8 +13,8 @@ export function About() {
           <div className="order-2 lg:order-1 flex justify-center relative">
             <div className="absolute inset-0 bg-[#e47200]/10 rounded-full blur-[80px] transform scale-75"></div>
             <img 
-              src="/squirrel-jack-logo.png" 
-              alt="Squirrel Jack Mascot" 
+              src="/squirrel-jack-logo.png"
+              alt="Squirrel Jack Junk Removal logo"
               className="w-full max-w-lg object-contain relative z-10 drop-shadow-2xl"
               style={{ filter: 'drop-shadow(0 30px 40px rgba(1,32,14,0.3))' }}
             />

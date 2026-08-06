@@ -40,6 +40,11 @@ export function Header() {
 
           <div className="flex items-center justify-between">
             <a href="#home" className="flex items-center gap-3 group" data-testid="link-logo">
+              <img
+                src="/squirrel-jack-logo.png"
+                alt="Squirrel Jack Junk Removal"
+                className="w-14 h-14 md:w-16 md:h-16 object-contain transition-transform group-hover:scale-105"
+              />
               <div className="flex flex-col">
                 <span className="text-xl md:text-2xl font-heading font-bold text-foreground leading-tight tracking-tight">SQUIRREL JACK</span>
                 <span className="text-xs md:text-sm font-heading font-semibold text-primary leading-tight tracking-wider uppercase">Junk Removal</span>
@@ -90,9 +95,16 @@ export function Header() {
           <div className="flex flex-col h-full px-6 pt-6 pb-10 overflow-y-auto">
             {/* Header row inside drawer */}
             <div className="flex items-center justify-between mb-10">
-              <div className="flex flex-col">
-                <span className="text-xl font-heading font-bold text-foreground leading-tight">SQUIRREL JACK</span>
-                <span className="text-xs font-heading font-semibold text-primary leading-tight tracking-wider uppercase">Junk Removal</span>
+              <div className="flex items-center gap-3">
+                <img
+                  src="/squirrel-jack-logo.png"
+                  alt="Squirrel Jack Junk Removal"
+                  className="w-14 h-14 object-contain"
+                />
+                <div className="flex flex-col">
+                  <span className="text-xl font-heading font-bold text-foreground leading-tight">SQUIRREL JACK</span>
+                  <span className="text-xs font-heading font-semibold text-primary leading-tight tracking-wider uppercase">Junk Removal</span>
+                </div>
               </div>
               <button
                 className="p-2 text-foreground"
