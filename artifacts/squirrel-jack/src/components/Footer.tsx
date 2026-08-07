@@ -8,12 +8,9 @@ export function Footer() {
           
           {/* Left */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="flex items-center gap-3 mb-6">
-              <img src="/squirrel-jack-logo.png" alt="Squirrel Jack Junk Removal logo" className="w-16 h-16 object-contain" />
-              <div className="flex flex-col">
-                <span className="text-xl font-heading font-bold text-foreground leading-tight">SQUIRREL JACK</span>
-                <span className="text-xs font-heading font-semibold text-primary uppercase tracking-wider">Junk Removal</span>
-              </div>
+            <div className="flex flex-col mb-6">
+              <span className="text-xl font-heading font-bold text-foreground leading-tight">SQUIRREL JACK</span>
+              <span className="text-xs font-heading font-semibold text-primary uppercase tracking-wider">Junk Removal</span>
             </div>
             <p className="text-foreground/70 font-semibold flex items-center gap-2">
               <MapPin className="w-4 h-4 text-primary" />
