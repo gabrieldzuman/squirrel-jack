@@ -4,9 +4,10 @@ export function Hero() {
   return (
     <section id="home" className="relative min-h-[90vh] flex items-center pt-24 pb-12 overflow-hidden bg-background">
       {/* Abstract background shapes */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
-        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-primary blur-[120px]" />
-        <div className="absolute bottom-[-20%] left-[-10%] w-[600px] h-[600px] rounded-full bg-secondary blur-[150px]" />
+      {/* Decorative blurs — desktop only; too GPU-heavy for iOS mobile */}
+      <div className="hidden md:block absolute inset-0 overflow-hidden pointer-events-none opacity-20" aria-hidden="true">
+        <div className="absolute top-[-10%] right-[-5%] w-[300px] h-[300px] rounded-full bg-primary blur-[80px]" />
+        <div className="absolute bottom-[-20%] left-[-10%] w-[300px] h-[300px] rounded-full bg-secondary blur-[80px]" />
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
