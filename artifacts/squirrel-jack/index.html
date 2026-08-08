@@ -4,6 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
 
+    <!-- Stale-cache recovery: if any JS/CSS asset returns 404 (old chunk after
+         a new deploy), reload without cache so the browser fetches fresh HTML
+         and the correct new chunk filenames. Runs inline from the cached HTML,
+         so it rescues sessions that never got the Cache-Control: no-cache header. -->
+    <script>
+      (function () {
+        var _reloading = false;
+        // On load: if we were redirected here by a recovery, clean the _cb
+        // param from the address bar without triggering another navigation.
+        if (location.search.indexOf('_cb=') !== -1) {
+          var clean = new URL(location.href);
+          clean.searchParams.delete('_cb');
+          history.replaceState(null, '', clean.pathname + (clean.search || '') + (clean.hash || ''));
+        }
+        function hardReload() {
+          if (_reloading) return;
+          _reloading = true;
+          // Navigate to the same URL with a cache-buster so the browser
+          // fetches the latest index.html from the server (bypasses disk cache).
+          var url = new URL(location.href);
+          url.searchParams.delete('_cb');
+          url.searchParams.set('_cb', Date.now());
+          location.replace(url.toString());
+        }
+        // Vite 4.3+: fired when a dynamically imported chunk fails to load
+        window.addEventListener('vite:preloadError', function (e) {
+          e.preventDefault();
+          hardReload();
+        });
+        // Capture-phase listener catches failed <script> / <link> elements
+        // before they bubble, including the main entry bundle.
+        window.addEventListener('error', function (e) {
+          var t = e.target;
+          if (!t || !t.tagName) return;
+          var tag = t.tagName.toUpperCase();
+          if (tag !== 'SCRIPT' && tag !== 'LINK') return;
+          var src = t.src || t.href || '';
+          // Only react to Vite-generated hashed assets, not external CDNs
+          if (src && src.indexOf('/assets/') !== -1) {
+            hardReload();
+          }
+        }, true);
+      })();
+    </script>
+
     <!-- Primary SEO -->
     <title>Squirrel Jack - Junk Removal</title>
     <meta name="description" content="Squirrel Jack Junk Removal — Lexington, KY's trusted junk removal team. We haul furniture, appliances, yard waste, construction debris and more. Fast, eco-friendly, upfront pricing. Call 859-528-7664 or text 859-629-5695." />
