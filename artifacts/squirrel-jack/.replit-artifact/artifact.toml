@@ -19,7 +19,8 @@ run = "pnpm --filter @workspace/squirrel-jack run dev"
 
 [services.production]
 build = [ "pnpm", "--filter", "@workspace/squirrel-jack", "run", "build" ]
-run = [ "pnpm", "--filter", "@workspace/squirrel-jack", "run", "start" ]
+publicDir = "artifacts/squirrel-jack/dist/public"
+serve = "static"
 
 [[services.production.rewrites]]
 from = "/*"
