@@ -54,9 +54,6 @@ export function Contact() {
               </div>
               <div>
                 <h4 className="font-bold text-[#01200e] text-lg mb-1">Serving Lexington & Surrounding Areas</h4>
-                <p className="text-[#01200e]/80 text-sm md:text-base leading-relaxed">
-                  Lexington, Nicholasville, Georgetown, Winchester, Richmond, Versailles and surrounding communities.
-                </p>
               </div>
             </div>
           </div>
