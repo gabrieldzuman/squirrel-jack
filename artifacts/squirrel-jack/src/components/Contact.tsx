@@ -48,8 +48,8 @@ export function Contact() {
           </div>
 
           <div className="bg-[#e47200]/10 border border-[#e47200]/20 rounded-xl p-6 text-left">
-            <div className="flex items-start gap-4">
-              <div className="bg-[#e47200] p-2 rounded-lg text-white mt-1 shrink-0">
+            <div className="flex items-center gap-4">
+              <div className="bg-[#e47200] p-2 rounded-lg text-white shrink-0">
                 <MapPin className="w-5 h-5" />
               </div>
               <div>
