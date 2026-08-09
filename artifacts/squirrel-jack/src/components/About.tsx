@@ -4,14 +4,14 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 export function About() {
   return (
     <section id="about" className="py-24 bg-[#f6e5d7] text-[#01200e] relative overflow-hidden">
-      {/* Decorative background element */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-white/40 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+      {/* Decorative background element — desktop only; too GPU-heavy for iOS mobile */}
+      <div className="hidden md:block absolute top-0 right-0 w-[400px] h-[400px] bg-white/40 rounded-full blur-[60px] -translate-y-1/2 translate-x-1/3 pointer-events-none" aria-hidden="true"></div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
           <div className="order-2 lg:order-1 flex justify-center relative">
-            <div className="absolute inset-0 bg-[#e47200]/10 rounded-full blur-[80px] transform scale-75"></div>
+            <div className="hidden md:block absolute inset-0 bg-[#e47200]/10 rounded-full blur-[50px] transform scale-75" aria-hidden="true"></div>
             <img 
               src="/squirrel-jack-logo-v2.webp"
               alt="Squirrel Jack Junk Removal logo"
