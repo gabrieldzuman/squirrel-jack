@@ -5,7 +5,7 @@ function FacebookIcon() {
     <svg
       viewBox="0 0 24 24"
       aria-hidden="true"
-      className="w-[29px] h-[29px] fill-current"
+      className="w-[30.45px] h-[30.45px] fill-current"
     >
       <path d="M13.5 21v-8h2.75l.4-3h-3.15V8.08c0-.87.24-1.46 1.5-1.46h1.8V3.94c-.31-.04-1.38-.14-2.63-.14-2.6 0-4.38 1.59-4.38 4.51V10H7v3h2.79v8h3.71Z" />
     </svg>
