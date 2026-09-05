@@ -186,8 +186,8 @@ export default function Services() {
         </section>
 
         <section id="services-cta" className="bg-background px-4 py-20 md:px-6 md:py-28">
-          <div className="container mx-auto max-w-5xl overflow-hidden rounded-3xl bg-primary px-6 py-12 text-center text-primary-foreground shadow-[0_20px_50px_rgba(228,114,0,0.25)] md:px-12 md:py-16">
-            <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-primary-foreground/75">
+          <div className="container mx-auto max-w-5xl overflow-hidden rounded-3xl px-6 py-12 text-center shadow-[0_20px_50px_rgba(228,114,0,0.25)] md:px-12 md:py-16 bg-foreground text-background">
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-ring">
               Your space could be next
             </p>
             <h2 className="font-heading text-4xl font-extrabold leading-tight md:text-6xl">
@@ -210,7 +210,7 @@ export default function Services() {
               </a>
               <a
                 href="tel:8595287664"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white/80 px-7 py-4 font-bold text-white transition-colors hover:bg-white hover:text-[#e47200]"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white/80 px-7 py-4 font-bold transition-colors hover:bg-white hover:text-[#e47200] bg-ring text-foreground"
                 data-testid="button-services-call"
               >
                 <Phone className="h-5 w-5" />
