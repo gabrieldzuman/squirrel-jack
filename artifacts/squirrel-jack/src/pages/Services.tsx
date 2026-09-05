@@ -13,13 +13,6 @@ const cleanups = [
     after: "/services/cleanup-1.1.webp",
   },
   {
-    number: "02",
-    title: "Apartment Community Cleanup",
-    description: "Bulky household items loaded up and hauled away from a busy community.",
-    before: "/services/cleanup-2.webp",
-    after: "/services/cleanup-2.2.webp",
-  },
-  {
     number: "03",
     title: "Barn Cleanup",
     description: "Old hay, yard waste, and unwanted items removed from an outbuilding.",
