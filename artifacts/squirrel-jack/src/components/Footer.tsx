@@ -22,10 +22,10 @@ export function Footer() {
           <div className="flex flex-col items-center text-center">
             <h4 className="font-heading font-bold text-lg mb-6 text-foreground">Quick Links</h4>
             <nav className="flex flex-col gap-3 mb-6">
-              <a href="#home" className="text-foreground/80 hover:text-primary transition-colors">Home</a>
-              <a href="#services" className="text-foreground/80 hover:text-primary transition-colors">Services</a>
-              <a href="#about" className="text-foreground/80 hover:text-primary transition-colors">About Us</a>
-              <a href="#contact" className="text-foreground/80 hover:text-primary transition-colors">Contact</a>
+              <a href="/" className="text-foreground/80 hover:text-primary transition-colors">Home</a>
+              <a href="/services" className="text-foreground/80 hover:text-primary transition-colors">Services</a>
+              <a href="/#about" className="text-foreground/80 hover:text-primary transition-colors">About Us</a>
+              <a href="/#contact" className="text-foreground/80 hover:text-primary transition-colors">Contact</a>
             </nav>
           </div>
 

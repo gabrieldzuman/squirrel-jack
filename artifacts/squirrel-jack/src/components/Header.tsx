@@ -18,10 +18,10 @@ export function Header() {
   }, [mobileMenuOpen]);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
-    { name: "About Us", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: "About Us", href: "/#about" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -39,7 +39,7 @@ export function Header() {
           </div>
 
           <div className="flex items-center justify-between">
-            <a href="#home" className="flex items-center gap-3 group" data-testid="link-logo">
+            <a href="/" className="flex items-center gap-3 group" data-testid="link-logo">
               <div className="flex flex-col">
                 <span className="text-xl md:text-2xl font-heading font-bold text-foreground leading-tight tracking-tight">SQUIRREL JACK</span>
                 <span className="text-xs md:text-sm font-heading font-semibold text-primary leading-tight tracking-wider uppercase">Junk Removal</span>
