@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://squirreljackjunkremoval.com/sitemap.xml
+# The API is not public website content and should not be crawled.
+Disallow: /api/
+
+Sitemap: https://squirreljack.com/sitemap.xml

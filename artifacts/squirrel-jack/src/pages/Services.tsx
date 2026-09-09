@@ -3,6 +3,7 @@ import { ArrowRight, Camera, Check, Phone } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingCTA } from "@/components/FloatingCTA";
+import { setPageSeo } from "@/lib/seo";
 
 const cleanups = [
   {
@@ -88,11 +89,12 @@ function PhotoCard({
 
 export default function Services() {
   useEffect(() => {
-    const previousTitle = document.title;
-    document.title = "Services & Cleanups | Squirrel Jack Junk Removal";
-    return () => {
-      document.title = previousTitle;
-    };
+    setPageSeo({
+      title: "Junk Removal Services Lexington KY | Squirrel Jack",
+      description:
+        "See Squirrel Jack's junk removal work in Lexington, KY, from furniture removal and apartment cleanouts to property, barn, and storage cleanups.",
+      path: "/services",
+    });
   }, []);
 
   return (
