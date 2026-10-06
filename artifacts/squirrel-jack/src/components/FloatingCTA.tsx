@@ -22,6 +22,7 @@ export function FloatingCTA() {
         className="flex items-center justify-center w-14 h-14 bg-[#1877F2] hover:bg-[#166FE5] text-white rounded-full shadow-[0_4px_14px_rgba(24,119,242,0.5)] transition-all hover:scale-110 active:scale-95 group"
         aria-label="Visit us on Facebook"
         data-testid="floating-cta-facebook"
+        data-analytics-button="floating_facebook"
       >
         <span className="absolute right-16 bg-white text-[#01200e] text-xs font-bold px-3 py-1 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
           Facebook
@@ -34,6 +35,7 @@ export function FloatingCTA() {
         className="flex items-center justify-center w-14 h-14 bg-[#e47200] hover:bg-[#c96200] text-white rounded-full shadow-[0_4px_14px_rgba(228,114,0,0.5)] transition-all hover:scale-110 active:scale-95 group"
         aria-label="Call us"
         data-testid="floating-cta-call"
+        data-analytics-button="floating_call"
       >
         <span className="absolute right-16 bg-white text-[#01200e] text-xs font-bold px-3 py-1 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
           Call us!
@@ -46,6 +48,7 @@ export function FloatingCTA() {
         className="flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full shadow-[0_4px_14px_rgba(37,211,102,0.4)] transition-all hover:scale-110 active:scale-95 group"
         aria-label="Text us"
         data-testid="floating-cta-text"
+        data-analytics-button="floating_text"
       >
         <span className="absolute right-16 bg-white text-[#01200e] text-xs font-bold px-3 py-1 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
           Text us!

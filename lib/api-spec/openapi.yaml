@@ -10,6 +10,8 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: analytics
+    description: Public event collection and protected dashboard analytics
 paths:
   /healthz:
     get:
@@ -24,7 +26,88 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /analytics/events:
+    post:
+      operationId: recordAnalyticsEvent
+      tags: [analytics]
+      summary: Record a public site analytics event
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AnalyticsEventInput"
+      responses:
+        "204":
+          description: Event recorded
+        "400":
+          description: Invalid event
+  /analytics/login:
+    post:
+      operationId: loginAnalyticsDashboard
+      tags: [analytics]
+      summary: Start a protected analytics dashboard session
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AnalyticsLoginInput"
+      responses:
+        "200":
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AnalyticsAuthResponse"
+        "401":
+          description: Invalid password
+        "503":
+          description: Dashboard password is not configured
+  /analytics/logout:
+    post:
+      operationId: logoutAnalyticsDashboard
+      tags: [analytics]
+      summary: End the protected analytics dashboard session
+      responses:
+        "200":
+          description: Session ended
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AnalyticsAuthResponse"
+  /analytics/summary:
+    get:
+      operationId: getAnalyticsSummary
+      tags: [analytics]
+      summary: Get monthly site analytics
+      security:
+        - dashboardSession: []
+      parameters:
+        - name: month
+          in: query
+          required: false
+          description: Month to summarize in YYYY-MM format. Defaults to the current UTC month.
+          schema:
+            type: string
+            pattern: "^[0-9]{4}-(0[1-9]|1[0-2])$"
+      responses:
+        "200":
+          description: Monthly analytics summary
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AnalyticsSummary"
+        "400":
+          description: Invalid month
+        "401":
+          description: Dashboard authentication required
 components:
+  securitySchemes:
+    dashboardSession:
+      type: apiKey
+      in: cookie
+      name: sj_dashboard
   schemas:
     HealthStatus:
       type: object
@@ -33,4 +116,109 @@ components:
           type: string
       required:
         - status
+    AnalyticsButtonId:
+      type: string
+      enum:
+        - header_logo_home
+        - header_nav_home
+        - header_nav_services
+        - header_nav_about
+        - header_nav_contact
+        - header_call
+        - mobile_menu_open
+        - mobile_menu_close
+        - hero_quote
+        - hero_call
+        - gallery_01_before
+        - gallery_01_after
+        - gallery_02_before
+        - gallery_02_after
+        - gallery_03_before
+        - gallery_03_after
+        - gallery_04_before
+        - gallery_04_after
+        - gallery_05_before
+        - gallery_05_after
+        - gallery_06_before
+        - gallery_06_after
+        - services_quote
+        - services_call
+        - contact_call
+        - contact_text
+        - floating_facebook
+        - floating_call
+        - floating_text
+        - footer_home
+        - footer_services
+        - footer_about
+        - footer_contact
+    AnalyticsEventInput:
+      type: object
+      description: page_view events require a public path; button_click events require a buttonId.
+      properties:
+        sessionId:
+          type: string
+          format: uuid
+        eventType:
+          type: string
+          enum: [page_view, button_click]
+        path:
+          type: string
+          enum: ["/", "/services"]
+        buttonId:
+          $ref: "#/components/schemas/AnalyticsButtonId"
+      required: [sessionId, eventType]
+    AnalyticsLoginInput:
+      type: object
+      properties:
+        password:
+          type: string
+          minLength: 1
+          maxLength: 1024
+      required: [password]
+    AnalyticsAuthResponse:
+      type: object
+      properties:
+        authenticated:
+          type: boolean
+      required: [authenticated]
+    AnalyticsMonth:
+      type: object
+      properties:
+        month:
+          type: string
+          pattern: "^[0-9]{4}-(0[1-9]|1[0-2])$"
+        siteVisits:
+          type: integer
+          minimum: 0
+        servicesVisits:
+          type: integer
+          minimum: 0
+      required: [month, siteVisits, servicesVisits]
+    AnalyticsButtonCount:
+      type: object
+      properties:
+        buttonId:
+          $ref: "#/components/schemas/AnalyticsButtonId"
+        label:
+          type: string
+        clicks:
+          type: integer
+          minimum: 0
+      required: [buttonId, label, clicks]
+    AnalyticsSummary:
+      type: object
+      properties:
+        selectedMonth:
+          type: string
+          pattern: "^[0-9]{4}-(0[1-9]|1[0-2])$"
+        monthly:
+          type: array
+          items:
+            $ref: "#/components/schemas/AnalyticsMonth"
+        buttons:
+          type: array
+          items:
+            $ref: "#/components/schemas/AnalyticsButtonCount"
+      required: [selectedMonth, monthly, buttons]
 

@@ -35,6 +35,7 @@ export function Hero() {
                 href="#contact" 
                 className="flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-8 py-4 rounded-xl text-lg transition-all hover:-translate-y-1 shadow-[0_10px_20px_rgba(228,114,0,0.3)]"
                 data-testid="button-hero-quote"
+                data-analytics-button="hero_quote"
               >
                 Get a Free Quote
                 <ArrowRight className="w-5 h-5" />
@@ -43,6 +44,7 @@ export function Hero() {
                 href="tel:8595287664" 
                 className="flex items-center justify-center gap-2 bg-transparent border-2 border-foreground hover:bg-foreground hover:text-background text-foreground font-bold px-8 py-4 rounded-xl text-lg transition-all hover:-translate-y-1 shadow-lg"
                 data-testid="button-hero-call"
+                data-analytics-button="hero_call"
               >
                 <Phone className="w-5 h-5" />
                 Call Now: 859-528-7664

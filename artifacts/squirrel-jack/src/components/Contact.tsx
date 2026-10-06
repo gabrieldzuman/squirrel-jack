@@ -22,6 +22,7 @@ export function Contact() {
               href="tel:8595287664"
               className="flex flex-col items-center justify-center gap-3 bg-[#01200e] hover:bg-[#01200e]/90 text-[#f6e5d7] p-8 rounded-2xl transition-transform hover:-translate-y-2 group flex-1"
               data-testid="link-contact-call"
+              data-analytics-button="contact_call"
             >
               <div className="bg-[#e47200] p-4 rounded-full text-[#01200e] group-hover:scale-110 transition-transform">
                 <Phone className="w-8 h-8" />
@@ -36,6 +37,7 @@ export function Contact() {
               href="sms:8596295695"
               className="flex flex-col items-center justify-center gap-3 bg-white hover:bg-gray-50 text-[#01200e] border-2 border-[#01200e] p-8 rounded-2xl transition-transform hover:-translate-y-2 group flex-1 shadow-lg"
               data-testid="link-contact-text"
+              data-analytics-button="contact_text"
             >
               <div className="bg-[#25D366] p-4 rounded-full text-white group-hover:scale-110 transition-transform">
                 <MessageSquare className="w-8 h-8" />

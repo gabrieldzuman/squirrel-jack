@@ -54,10 +54,12 @@ function PhotoCard({
   src,
   label,
   alt,
+  analyticsId,
 }: {
   src: string;
   label: "Before" | "After";
   alt: string;
+  analyticsId: string;
 }) {
   return (
     <a
@@ -66,6 +68,7 @@ function PhotoCard({
       rel="noopener noreferrer"
       className="group relative block overflow-hidden rounded-xl bg-[#01200e] aspect-[4/3] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#e47200]/50"
       aria-label={`Open ${label.toLowerCase()} photo`}
+      data-analytics-button={analyticsId}
     >
       <img
         src={src}
@@ -167,11 +170,13 @@ export default function Services() {
                       src={cleanup.before}
                       label="Before"
                       alt={`${cleanup.title} before cleanup`}
+                      analyticsId={`gallery_${cleanup.number}_before`}
                     />
                     <PhotoCard
                       src={cleanup.after}
                       label="After"
                       alt={`${cleanup.title} after cleanup`}
+                      analyticsId={`gallery_${cleanup.number}_after`}
                     />
                   </div>
                 </article>
@@ -199,6 +204,7 @@ export default function Services() {
                 href="/#contact"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#01200e] px-7 py-4 font-bold text-white transition-transform hover:-translate-y-1"
                 data-testid="button-services-quote"
+                data-analytics-button="services_quote"
               >
                 Get a Free Quote
                 <ArrowRight className="h-5 w-5" />
@@ -207,6 +213,7 @@ export default function Services() {
                 href="tel:8595287664"
                 className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white/80 px-7 py-4 font-bold transition-colors hover:bg-white hover:text-[#e47200] bg-ring text-foreground"
                 data-testid="button-services-call"
+                data-analytics-button="services_call"
               >
                 <Phone className="h-5 w-5" />
                 Call 859-528-7664
